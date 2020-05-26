@@ -3,8 +3,14 @@
 
 data/config
 
+# Austin input files
 data/input/austin/osm
 
+# Geneva input files
+data/input/geneva/google_transit
+data/input/geneva/osm
+
+#  Seattle input files
 data/input/seattle/blockface.bin
 data/input/seattle/blockface.kml
 data/input/seattle/google_transit
@@ -21,6 +27,7 @@ data/input/seattle/sidewalks.bin
 data/input/seattle/sidewalks.kml
 data/input/seattle/trips_2014.csv
 
+# Generic input files
 data/input/raw_maps
 data/input/screenshots/*/*.gif
 data/input/screenshots/*/combine.sh
@@ -30,3 +37,6 @@ data/player
 data/system/maps
 data/system/prebaked_results
 data/system/scenarios
+
+# Mac OS temporary files
+.DS_Store

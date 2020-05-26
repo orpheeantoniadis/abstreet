@@ -20,6 +20,9 @@ pub fn get_lane_types(osm_tags: &BTreeMap<String, String>) -> (Vec<LaneType>, Ve
     if osm_tags.get(osm::HIGHWAY) == Some(&"footway".to_string()) {
         return (vec![LaneType::Sidewalk], Vec::new());
     }
+    if osm_tags.get(osm::HIGHWAY) == Some(&"living_street".to_string()) {
+        return (vec![LaneType::Sidewalk], Vec::new());
+    }
 
     // TODO Reversible roads should be handled differently?
     let oneway = osm_tags.get("oneway") == Some(&"yes".to_string())

@@ -214,6 +214,10 @@ impl Manifest {
                 }
                 "huge_seattle" => map == "huge_seattle",
                 "austin" => map == "downtown_atx" || map == "huge_austin",
+                "geneva" => {
+                    map == "plainpalais" ||
+                    map == "huge_geneva"
+                }
                 _ => panic!("Unknown city {}", city),
             }
         }

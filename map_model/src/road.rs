@@ -408,6 +408,7 @@ impl Road {
                 "residential" => 5,
 
                 "footway" => 1,
+                "living_street" => 1,
 
                 "unclassified" => 0,
                 "road" => 0,

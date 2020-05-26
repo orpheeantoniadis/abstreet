@@ -419,7 +419,7 @@ fn is_road(tags: &BTreeMap<String, String>) -> bool {
         // List of non-car types from https://wiki.openstreetmap.org/wiki/Key:highway
         // TODO Footways are very useful, but they need more work to associate with main roads
         "footway",
-        "living_street",
+        // "living_street",
         "pedestrian",
         "track",
         "bus_guideway",
@@ -439,6 +439,7 @@ fn is_road(tags: &BTreeMap<String, String>) -> bool {
         "planned",
         "razed",
         "corridor",
+        "platform",
     ] {
         if tags.get(osm::HIGHWAY) == Some(&value.to_string()) {
             return false;

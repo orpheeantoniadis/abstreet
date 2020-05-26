@@ -350,9 +350,10 @@ impl RestrictionType {
             | "no_u_turn"
             | "no_anything"
             | "conditional=no_left_turn" => Some(RestrictionType::BanTurns),
-            "only_left_turn" | "only_right_turn" | "only_straight_on" => {
-                Some(RestrictionType::OnlyAllowTurns)
-            }
+            "only_left_turn"
+            | "only_right_turn"
+            | "only_straight_on"
+            | "only_u_turn" => Some(RestrictionType::OnlyAllowTurns),
             // TODO Support this
             "no_right_turn_on_red" => None,
             _ => panic!("Unknown turn restriction {}", restriction),
