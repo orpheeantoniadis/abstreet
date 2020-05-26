@@ -5,6 +5,10 @@ fn input() {
         "../data/input/geneva/google_transit/",
         "https://gtfs.geops.ch/dl/gtfs_bus.zip",
     );
+    download(
+        "../data/input/geneva/osm/Geneva.osm",
+        "https://download.bbbike.org/osm/extract/planet_6.0453,46.1574_6.2428,46.2569.osm.xz",
+    );
 }
 
 pub fn osm_to_raw(name: &str) {

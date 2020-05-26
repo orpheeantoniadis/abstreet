@@ -58,6 +58,10 @@ pub fn download(output: &str, url: &str) {
         run(Command::new("mv")
             .arg(tmp)
             .arg(output.replace(".bin", ".kml")));
+    } else if url.ends_with(".xz") {
+        println!("- Xunzipping");
+        run(Command::new("mv").arg(tmp).arg(format!("{}.xz", output)));
+        run(Command::new("unxz").arg(format!("{}.xz", output)));
     } else {
         run(Command::new("mv").arg(tmp).arg(output));
     }
